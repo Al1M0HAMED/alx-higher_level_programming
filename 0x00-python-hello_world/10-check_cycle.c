@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 	{
 		if (i)
 		{
-			if (tmp == list || tmp->next == list)
+			if (tmp == head || tmp->next == head)
 				return (1);
 		}
 		tmp = tmp->next;
