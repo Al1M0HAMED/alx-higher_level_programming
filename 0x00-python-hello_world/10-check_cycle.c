@@ -4,19 +4,21 @@
  * @list: is the head of the linked list.
  * Return: 1 if found an cycle 0 if did not.
  */
-int check_cycle(listint_t *head)
+int check_cycle(listint_t *list)
 {
-	listint_t *sonic = head;
-	listint_t *super_sonic = head;
+	listint_t *current, *tmp;
 
-	if (head == NULL)
-		return (0);
-	while (sonic && super_sonic && super_sonic->next)
-	{
-		sonic = sonic->next;
-		super_sonic = super_sonic->next->next;
-		if (super_sonic == sonic)
-			return (1);
+	tmp = list;
+	while(tmp != NULL)
+	{	
+		current = tmp->next;
+		while (current != NULL)
+		{
+			if (current == tmp)
+				return (1);
+			current = current->next;
+		}
+		tmp = tmp->next;
 	}
 	return (0);
 }
