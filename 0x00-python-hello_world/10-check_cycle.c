@@ -9,13 +9,13 @@ int check_cycle(listint_t *list)
 	int i = 0;
 	listint_t *current, *tmp;
 
-	if (list == NULL)
-		return (0);
+	if (!list)
+		return (1);
 	tmp = list;
-	while (tmp != NULL)
+	while (tmp)
 	{	
 		current = list, i = 0;
-		while (current != NULL)
+		while (current)
 		{
 			if (current == tmp)
 			{
@@ -24,6 +24,8 @@ int check_cycle(listint_t *list)
 				i++;
 			}
 			current = current->next;
+			if (!current)
+				return (0);
 		}
 		tmp = tmp->next;
 	}
