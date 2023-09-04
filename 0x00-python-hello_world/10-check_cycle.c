@@ -6,13 +6,13 @@
  */
 int check_cycle(listint_t *list)
 {
-	int i;
+	int i = 0;
 	listint_t *current, *tmp;
 
 	tmp = list;
 	while(tmp != NULL)
 	{	
-		current = tmp->next, i = 0;
+		current = tmp->next;
 		while (current != NULL)
 		{
 			if (i)
