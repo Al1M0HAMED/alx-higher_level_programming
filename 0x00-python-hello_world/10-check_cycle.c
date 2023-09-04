@@ -9,7 +9,7 @@ int check_cycle(listint_t *head)
 	listint_t *sonic = head;
 	listint_t *super_sonic = head;
 
-	if (list == NULL)
+	if (head == NULL)
 		return (0);
 	while (sonic && super_sonic && super_sonic->next)
 	{
