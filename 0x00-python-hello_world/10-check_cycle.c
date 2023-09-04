@@ -9,8 +9,6 @@ int check_cycle(listint_t *list)
 	int i = 0;
 	listint_t *current, *tmp;
 
-	if (!list)
-		return (1);
 	tmp = list;
 	while (tmp)
 	{	
