@@ -18,6 +18,8 @@ int check_cycle(listint_t *list)
 				return (1);
 			current = current->next;
 		}
+		if (!current)
+			return (0);
 		tmp = tmp->next;
 	}
 	return (0);
