@@ -7,4 +7,4 @@ def uppercase(s):
            char = ord(char) - ord(" ")
            char = chr(char)
         print("{}".format(char), end="")
-    print("{}".format("\n"), end="")
+    print('')
