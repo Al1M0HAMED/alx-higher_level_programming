@@ -33,7 +33,7 @@ listint_t *insert_node(listint_t **head, int number)
 	h = *head;
 	while (h != NULL)
 	{
-		if (h->n == n[--i])
+		if (h->n == n[i])
 		{
 			new_node = malloc(sizeof(listint_t));
 			if (!new_node)
