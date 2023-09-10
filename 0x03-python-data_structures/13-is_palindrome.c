@@ -28,11 +28,11 @@ int is_palindrome(listint_t **head)
 	while (seccond)
 	{
 		if (first->n != seccond->n)
-			return (1);
+			return (0);
 		first = first->next;
 		seccond = seccond->next;
 	}
-	return (0);
+	return (1);
 }
 /**
  * listint_len - returns the number of elements in a linked lists
