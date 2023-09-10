@@ -22,10 +22,10 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		idx--, i++;
 	}
-	idx = 0, i--, current = current->next;
+	idx = 0, i--;
 	while (i >= 0)
 	{
-		if (current == NULL || arr[i] != current->n)
+		if ((current == NULL && i) || arr[i] != current->n)
 			return (0);
 		current = current->next, i--;
 	}
