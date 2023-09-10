@@ -8,14 +8,13 @@
 int is_palindrome(listint_t **head)
 {
 	size_t len;
-	int idx, *arr, i;
+	int idx, arr[2056], i;
 	listint_t *current = *head;
 
 	if (!*head || !(*head)->next)
 		return (1);
 
 	len = listint_len(*head);
-	arr =  malloc((sizeof(int) * (len / 2)) + 1);
 	idx = (len / 2), i = 0;
 	while (idx && current)
 	{
@@ -23,17 +22,13 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		idx--, i++;
 	}
-	idx = 0, i--;
-	while (current)
+	idx = 0, i--, current = current->next;
+	while (i >= 0)
 	{
-		if (arr[i] != current->n)
-		{
-			free(arr);
+		if (current == NULL || arr[i] != current->n)
 			return (0);
-		}
 		current = current->next, i--;
 	}
-	free(arr);
 	return (1);
 }
 /**
