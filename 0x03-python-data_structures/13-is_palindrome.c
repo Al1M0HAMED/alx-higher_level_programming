@@ -22,6 +22,8 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		idx--, i++;
 	}
+	if (len % 2 != 0)
+		current = current->next;
 	idx = 0, i--;
 	while (i >= 0)
 	{
