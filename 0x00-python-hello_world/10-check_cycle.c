@@ -7,20 +7,20 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *t, *h;
+	listint_t *turtle, *hare;
 
 	if (list == NULL || list->next == NULL)
 		return (0);
 
-	h = list->next->next;
-       	t = list->next;
+	hare = list->next->next;
+       	turtle = list->next;
 
-	while (h->next && t && h)
+	while (hare->next && turtle && hare)
 	{	
 		if (h == t)
 			return (1);
-		t = t->next;
-                h = h->next->next;
+		turtle = turtle->next;
+                hare = hare->next->next;
 	}
 	return (0);
 }
