@@ -9,13 +9,14 @@ int check_cycle(listint_t *list)
 {
 	listint_t *t = list, *h = list;
 
-	while (h->next->next)
-	{
-		t = t->next;
-		h = h->next->next;
-
+	if (list == NULL || list->next == NULL)
+		return (0);
+	while (h->next->next && t && h)
+	{	
 		if (h == t)
 			return (1);
+		t = t->next;
+                h = h->next->next;
 	}
 	return (0);
 }
