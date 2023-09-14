@@ -5,7 +5,7 @@ def best_score(a_dictionary):
     i = 0
     biggest_element, biggest_key = int(), str()
     for key, element in a_dictionary.items():
-        if i is 0 or element > biggest_element:
+        if i == 0 or element > biggest_element:
             biggest_key = key
             biggest_element = element
         i += 1
