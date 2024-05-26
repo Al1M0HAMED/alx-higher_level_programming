@@ -7,44 +7,35 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *left, *right;
-	size_t mid_index, len;
-	int j, i;
+	listint_t *mid = *head, *first = *head, *last;
+	size_t idx, len;
 
 	if (!*head || !(*head)->next)
 		return (1);
-	
+
 	len = listint_len(*head);
-
-	if (len % 2 == 0)
-		mid_index = len / 2, j = 1;
+	if (len % 2)
+		idx = (len / 2) + 1;
 	else
-		mid_index = len / 2 + 1, j = 2;
-	if (len <= 1)
-		return (1);
+		idx = (len / 2);
 
-	left = *head;
-	i = mid_index;
-	while(i)
+	while (idx > 0)
+		mid = mid->next, idx--;
+
+	last = reverse_listint(&mid);
+	mid = last;
+
+	while (first && last)
 	{
-		left = left->next;
-		i--;
-	}
-	while (left)
-	{
-		right = *head;
-		i = mid_index - j;
-		while(i)
+		if (last->n != first->n)
 		{
-			right = right->next;
-			i--;
+			reverse_listint(&mid);
+			return (0);
 		}
-		if (left->n != right->n)
-			return (-1);
-		left = left->next;
-		j++;
+		first = first->next;
+		last = last->next;
 	}
-
+	reverse_listint(&mid);
 	return (1);
 }
 /**
