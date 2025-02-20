@@ -9,8 +9,6 @@ def safe_print_division(a, b):
         n = a / b
     except ZeroDivisionError:
         n = None
-    except:
-        raise
     finally:
         print("Inside result:", n)
         return (n)
