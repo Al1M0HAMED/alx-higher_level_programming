@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """a function that prints x elements of a list.
     All elements must be printed on the same line followed by a new line
     x represents the number of elements to print
