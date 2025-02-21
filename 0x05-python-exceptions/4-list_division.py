@@ -9,7 +9,7 @@ def list_division(my_list_1, my_list_2, list_length):
             new_list[i] = (my_list_1[i] / my_list_2[i])
         except IndexError:
             print("out of range")
-            break
+            pass
         except (TypeError, ValueError):
             print("wrong type")
             new_list[i] = 0
