@@ -5,9 +5,11 @@
     x can be bigger than the length of my_list
     Returns the real number of elements printed
     """
+
+
 def safe_print_list(my_list=[], x=0):
     i = 0
-    for i in range (x):
+    for i in range(x):
         try:
             print("{}".format(my_list[i]), end="")
             i += 1
