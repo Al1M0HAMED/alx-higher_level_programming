@@ -3,7 +3,7 @@
     All elements must be printed on the same line followed by a new line
     x represents the number of elements to print
     x can be bigger than the length of my_list
-    Returns the real number of elements printed
+    Return the real number of elements printed
     """
 
 
