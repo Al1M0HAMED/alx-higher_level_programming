@@ -13,6 +13,10 @@ class Square:
         """creates a square"""
         self.__size = size
         self.__position = position
+        if isinstance(self.__position, tuple) is False or len(self.__position) != 2 or isinstance(self.__position[0], int) is False or isinstance(self.__position[1], int) is False or self.__position[0] < 0 or self.__position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+                    
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         else:
@@ -41,11 +45,11 @@ class Square:
     def is_valid_tuple(self, value):
         """ checks if valid tuple """
         if isinstance(value, tuple) and len(value) == 2:
-            if isinstance(value[0], int) and isinstance(value[1], tuple):
-                if value[0] > 0 and value[1] > 0:
-                    return (1)
+            if isinstance(value[0], int) and isinstance(value[1], int):
+                if value[0] >= 0 and value[1] >= 0:
+                    return (True)
         else:
-            return (0)
+            return (False)
 
     @property
     def position(self):
@@ -55,21 +59,22 @@ class Square:
     @position.setter
     def position(self, value):
         """sets position"""
-        if is_valid_tuple(value):
-            self.__value = value
+        if self.is_valid_tuple(value) == 1:
+            self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         """ prints square """
-        if is_valid_tuple(self.position):
-
-            for i in range(self.size):
-                for i in range(self.position[0]):
-                    print(" ", end="")
+        if self.is_valid_tuple(self.position):
+            if (self.size > 0):
                 for i in range(self.size):
-                    print("#", end="")
-                if self.position[0] > 0:
+                    for i in range(self.position[0]):
+                        print(" ", end="")
+                    for i in range(self.size):
+                        print("#", end="")
                     print("")
-        else:
+            if self.position[1] != 0:
+                print("")
+        elif not self.is_valid_tuple(self.position):
             raise TypeError("position must be a tuple of 2 positive integers")
