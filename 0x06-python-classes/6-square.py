@@ -62,12 +62,14 @@ class Square:
 
     def my_print(self):
         """ prints square """
-        if self.size == 0:
-            print("")
-        else:
+        if is_valid_tuple(self.position):
+
             for i in range(self.size):
                 for i in range(self.position[0]):
                     print(" ", end="")
                 for i in range(self.size):
                     print("#", end="")
-                print("")
+                if self.position[0] > 0:
+                    print("")
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
