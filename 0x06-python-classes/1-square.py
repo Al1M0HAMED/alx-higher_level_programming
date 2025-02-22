@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This module performs oop learning operations.
+
+Author: Ali Mohamed
+Date: 2024-02-23
+"""
 
 
 class Square:
