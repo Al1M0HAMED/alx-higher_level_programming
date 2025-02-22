@@ -14,7 +14,12 @@ class Square:
         self.__size = size
         self.__position = position
 
-        if (not isinstance(self.__position, tuple) or len(self.__position) != 2 or not isinstance(self.__position[0], int) or not isinstance(self.__position[1], int) or not self.__position[0] >= 0 or not self.__position[1] >= 0):
+        if (not isinstance(self.__position, tuple) or
+                len(self.__position) != 2 or
+                not isinstance(self.__position[0], int) or
+                not isinstance(self.__position[1], int) or
+                not self.__position[0] >= 0 or
+                not self.__position[1] >= 0):
             raise TypeError("position must be a tuple of 2 positive integers")
 
         if not isinstance(size, int):
@@ -50,15 +55,22 @@ class Square:
     @position.setter
     def position(self, value):
         """sets position"""
-        if (not isinstance(value, tuple) or len(value) != 2 or not isinstance(value[0], int) or not isinstance(value[1], int) or not value[0] >= 0 or not value[1] >= 0):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not isinstance(value[0], int) or
+                not isinstance(value[1], int) or
+                not value[0] >= 0 or
+                not value[1] >= 0):
             raise TypeError("position must be a tuple of 2 positive integers")
-        
         self.__position = value
 
     def my_print(self):
         """ prints square """
-        [print("") for i in range(self.__position[1])]
-        for i in range(self.__size):
-            [print(" ", end="") for j in range(self.__position[0])]
-            [print("#", end="") for k in range(self.__size)]
+        if (self.size == 0):
             print("")
+        else:
+            [print("") for i in range(self.__position[1])]
+            for i in range(self.__size):
+                [print(" ", end="") for j in range(self.__position[0])]
+                [print("#", end="") for k in range(self.__size)]
+                print("")
