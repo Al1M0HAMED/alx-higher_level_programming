@@ -16,7 +16,7 @@ Examples:
 My name is Ali Mohamed
 
 >>> say_my_name("Ali")
-My name is Ali
+My name is Ali 
  
 ### Invalid cases - Type Errors
 
