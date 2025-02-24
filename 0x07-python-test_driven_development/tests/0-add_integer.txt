@@ -1,0 +1,19 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 3)
+5
+>>> add_integer(2.5, 3.9)
+5
+>>> add_integer(-1.2, 1.8)
+0
+>>> add_integer(100, 200.6)
+300
+>>> add_integer('a', 200.6)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(100, 'gg')
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(100, 10)
+110
+>>> add_integer(3)
+101
