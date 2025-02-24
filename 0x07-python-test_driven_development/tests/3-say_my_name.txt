@@ -1,0 +1,38 @@
+0-add_integer.py
+================
+
+This module contains a function `say_my_name(first_name, last_name="")` that adds two integers.
+If the inputs are floats, they are cast to integers before addition.
+If the inputs are invalid, the function raises appropriate exceptions.
+
+Examples:
+---------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+### Valid cases
+
+>>> say_my_name("Ali", "Mohamed")
+My name is Ali Mohamed
+
+>>> say_my_name("Ali")
+My name is Ali
+ 
+### Invalid cases - Type Errors
+
+>>> say_my_name(2, 1)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Ali", 1)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name("Ali", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+### Special Cases
