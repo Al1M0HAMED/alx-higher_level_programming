@@ -22,6 +22,10 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
 
+>>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], "s"))
+Traceback (most recent call last):
+TypeError: div must be a number
+
 ### Invalid cases -  devide by zero
 
 >>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], 0))
