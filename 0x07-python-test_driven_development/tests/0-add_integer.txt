@@ -12,7 +12,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 >>> add_integer(100, 'gg')
 Traceback (most recent call last):
-TypeError: b must be an intege
+TypeError: b must be an integer
 >>> add_integer(100, 10)
 110
 >>> add_integer(2)
@@ -21,3 +21,6 @@ TypeError: b must be an intege
 4
 >>> add_integer(-2.0, -4.0)
 -6
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
