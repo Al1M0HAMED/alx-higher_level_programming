@@ -17,3 +17,7 @@ TypeError: b must be an integer
 110
 >>> add_integer(2)
 100
+>>> add_integer(2.2, 2)
+4
+>>> add_integer(-2.0, -4.0)
+-6
