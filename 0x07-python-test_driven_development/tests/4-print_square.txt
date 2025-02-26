@@ -1,0 +1,43 @@
+================
+4-print_square.py
+================
+
+"""
+Module: <module_name>
+Function: <print_square>
+Description: <brief_description_of_function>
+"""
+
+>>> print_square = __import__('4-print_square').print_square
+
+### Valid cases
+
+>>> print_square(4)
+####
+####
+####
+####
+
+>>> print_square(1)
+#
+
+### Invalid cases - Type Errors
+
+>>> print_square(-1)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+>>> print_square("ss")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+### Invalid cases - other
+
+>>> print_square(-1.4)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> print_square(1.4)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
