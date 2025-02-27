@@ -15,9 +15,9 @@ def text_indentation(text):
         if (text[char] == "?" or text[char] == "." or text[char] == ":"):
             print("\n")
             char += 1
-            if (text[char] != " "):
-                char -= 1
+            if (text[char] == " "):
+                char += 1
             else:
-                char += 2
+                char -= 1
         char += 1
 
