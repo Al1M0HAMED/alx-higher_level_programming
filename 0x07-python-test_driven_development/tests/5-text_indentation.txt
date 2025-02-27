@@ -1,0 +1,27 @@
+=====================
+5-text_indentation.py
+=====================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+### valid test cases
+
+>>> text_indentation("""hello.
+... i want to know, did the problem got solved?
+... and if not do the following:
+... 1 solve it
+... 2 solve it
+... 3 solve it!!!""")
+hello.
+<BLANKLINE>
+i want to know, did the problem got solved?
+<BLANKLINE>
+and if not do the following:
+<BLANKLINE>
+1 solve it
+2 solve it
+3 solve it!!!
+
+>>> text_indentation("""hello""")
+hello
