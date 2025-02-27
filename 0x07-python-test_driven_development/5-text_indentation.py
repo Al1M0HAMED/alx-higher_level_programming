@@ -16,7 +16,7 @@ def text_indentation(text):
             print("\n")
             char += 1
             if (text[char] == " "):
-                char += 1
+                pass
             else:
                 char -= 1
         char += 1
