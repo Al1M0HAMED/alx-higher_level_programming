@@ -11,13 +11,11 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     while (char < len(text)):
         print(text[char], end="")
-
         if (text[char] == "?" or text[char] == "." or text[char] == ":"):
             print("\n")
-            char += 1
-            if (text[char] == " "):
-                pass
-            else:
-                char -= 1
+            j = char
+            while (text[j] == ' '):
+                j += 1
+            char = j + 1
         char += 1
 

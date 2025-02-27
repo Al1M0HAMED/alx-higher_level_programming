@@ -18,3 +18,12 @@ and if not do the following:
 
 >>> text_indentation("""hello""")
 hello
+
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
