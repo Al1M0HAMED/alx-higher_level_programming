@@ -12,6 +12,10 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([5]), 5)
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer(), None)
+        self.assertEqual(max_integer([0, 1, 3, 2, 5]), 5)
+        self.assertEqual(max_integer([5, 0, 3, 2, 2]), 5)
+        self.assertEqual(max_integer([-1, -5, -3, -2, -7]), -1)
+        self.assertEqual(max_integer([0, 5, 3, -1, 2]), 5)
 
     def test_fail(self):
         """ tests that are expected to fail with Error """
