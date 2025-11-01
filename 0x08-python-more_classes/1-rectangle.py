@@ -21,7 +21,7 @@ class Rectangle:
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         else:
-            if width < 0:
+            if height < 0:
                 raise ValueError("height must be >= 0")
 
     @property
