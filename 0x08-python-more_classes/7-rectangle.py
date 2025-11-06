@@ -9,7 +9,7 @@ Date: 2025-11-1
 
 class Rectangle:
     """A simple square class that performs basic operations."""
-    print_symbol = '#'
+    print_symbol = "#"
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -69,17 +69,14 @@ class Rectangle:
         return ((self.__height + self.__width) * 2)
 
     def __str__(self):
-        parts = []
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        else:
+        rect_str = ""
+        if self.__height != 0 or self.__width != 0:
             for i in range(self.__height):
                 if i > 0:
-                    parts.append("\n")
+                    rect_str += "\n"
                 for j in range(self.__width):
-                    parts.append(Rectangle.print_symbol)
-            rectangle_str = ''.join(parts)
-            return (rectangle_str)
+                    rect_str += str(self.print_symbol)
+        return (rect_str)
 
     def __repr__(self):
         return (f"Rectangle({self.__width}, {self.__height})")
