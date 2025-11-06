@@ -8,8 +8,9 @@ Date: 2025-11-1
 
 
 class Rectangle:
-    number_of_instances = 0
     """A simple square class that performs basic operations."""
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ creates a square """
         self.__width = width
