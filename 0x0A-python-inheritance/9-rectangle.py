@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
 date: 8 / 11 / 2025
-auther: Ali Mohamed 
+auther: Ali Mohamed
 """
-
-
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
 class Rectangle(BaseGeometry):
     """ basic Rectangle operation that inherits from base geometry """
     def __init__(self, width, height):
