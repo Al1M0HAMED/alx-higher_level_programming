@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """
 date: 8 / 11 / 2025
 auther: Ali Mohamed 
 """
 
 
-class Rectangle(BaseGeometry):
 
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+class Rectangle(BaseGeometry):
+    """ basic Rectangle operation that inherits from base geometry """
     def __init__(self, width, height):
         self.__width = width
         self.integer_validator("width", self.__width)
