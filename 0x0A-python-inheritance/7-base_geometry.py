@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """ 
+This module performs oop learning operations.
 
+Author: Ali Mohamed
+Date: 2025-11-8
 
 """
 
 
 class BaseGeometry:
-    """ """
+    """ simple inheritance operations """
 
     def area(self):
         raise Exception("area() is not implemented")
