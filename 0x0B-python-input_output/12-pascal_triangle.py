@@ -5,9 +5,9 @@ pascal list of lists
 
 
 def pascal_triangle(n):
-"""
-Generate a Pascal's Triangle with `n` rows.
-"""
+    """
+    Generate a Pascal's Triangle with `n` rows.
+    """
     pascal_list = []
     i = 0
     while i < n:
