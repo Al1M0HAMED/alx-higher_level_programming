@@ -17,6 +17,9 @@ class Rectangle(Base):
         self.y = y
 
     def is_validated(self, value):
+        """
+        is valid
+        """
         validation = 1
         if isinstance(value, int):
             if value < 0:
