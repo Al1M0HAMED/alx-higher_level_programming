@@ -10,12 +10,22 @@ class Rectangle(Base):
     Rectangle
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.id = id
-        super().__init__(self.id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
+    def is_validated(self, value):
+        validation = 1
+        if isinstance(value, int):
+            if value < 0:
+                validation = 2
+            elif value == 0:
+                return 3
+            else:
+                validation = 0
+        return (validation)
 
     @property
     def width(self):
@@ -23,7 +33,12 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        self.__width = value
+        if self.is_validated(value) == 0:
+            self.__width = value
+        elif self.is_validated(value) == 1:
+            raise TypeError("width must be an integer")
+        else:
+            raise ValueError("width must be > 0")
 
     @property
     def height(self):
@@ -31,7 +46,12 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.__height = value
+        if self.is_validated(value) == 0:
+            self.__height = value
+        elif self.is_validated(value) == 1:
+            raise TypeError("height must be an integer")
+        else:
+            raise ValueError("height must be > 0")
 
     @property
     def x(self):
@@ -39,7 +59,12 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.__x = value
+        if self.is_validated(value) == 0 or self.is_validated(value) == 3:
+            self.__x = value
+        elif self.is_validated(value) == 1:
+            raise TypeError("x must be an integer")
+        else:
+            raise ValueError("x must be => 0")
 
     @property
     def y(self):
@@ -47,4 +72,9 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.__y = value
+        if self.is_validated(value) == 0 or self.is_validated(value) == 3:
+            self.__y = value
+        elif self.is_validated(value) == 1:
+            raise TypeError("y must be an integer")
+        else:
+            raise ValueError("y must be => 0")
