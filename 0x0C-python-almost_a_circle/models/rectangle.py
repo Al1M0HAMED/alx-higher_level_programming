@@ -24,8 +24,6 @@ class Rectangle(Base):
         if isinstance(value, int):
             if value < 0:
                 validation = 2
-            elif value == 0:
-                validation = 3
             else:
                 validation = 0
         return (validation)
@@ -62,7 +60,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if self.is_validated(value) == 0 or self.is_validated(value) == 3:
+        if self.is_validated(value) == 0 or value == 0:
             self.__x = value
         elif self.is_validated(value) == 1:
             raise TypeError("x must be an integer")
@@ -75,7 +73,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        if self.is_validated(value) == 0 or self.is_validated(value) == 3:
+        if self.is_validated(value) == 0 or value == 0:
             self.__y = value
         elif self.is_validated(value) == 1:
             raise TypeError("y must be an integer")
