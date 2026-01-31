@@ -25,7 +25,7 @@ class Rectangle(Base):
             if value < 0:
                 validation = 2
             elif value == 0:
-                return 3
+                validation = 3
             else:
                 validation = 0
         return (validation)
