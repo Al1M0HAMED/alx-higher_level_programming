@@ -60,7 +60,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if self.is_validated(value) == 0 or value == 0:
+        if self.is_validated(value) == 0 or self.value == 0:
             self.__x = value
         elif self.is_validated(value) == 1:
             raise TypeError("x must be an integer")
@@ -73,7 +73,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        if self.is_validated(value) == 0 or value == 0:
+        if self.is_validated(value) == 0 or self.value == 0:
             self.__y = value
         elif self.is_validated(value) == 1:
             raise TypeError("y must be an integer")
