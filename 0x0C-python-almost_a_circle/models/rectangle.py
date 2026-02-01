@@ -22,7 +22,7 @@ class Rectangle(Base):
         """
         validation = 1
         if isinstance(value, int):
-            if value < 0:
+            if value <= 0:
                 validation = 2
             else:
                 validation = 0
