@@ -16,6 +16,12 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def area(self):
+        """
+        returns area
+        """
+        return (self.__width * self.__height)
+
     def is_validated(self, value):
         """
         is valid
