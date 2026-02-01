@@ -68,7 +68,7 @@ class Rectangle(Base):
         elif valid == 1:
             raise TypeError("x must be an integer")
         else:
-            raise ValueError("x must be => 0")
+            raise ValueError("x must be >= 0")
 
     @property
     def y(self):
@@ -82,4 +82,4 @@ class Rectangle(Base):
         elif valid == 1:
             raise TypeError("y must be an integer")
         else:
-            raise ValueError("y must be => 0")
+            raise ValueError("y must be >=> 0")
