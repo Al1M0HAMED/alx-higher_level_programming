@@ -16,21 +16,18 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update
         """
-        length = len(args)
-        if length >= 1:
-            self.id = args[0]
-            if length >= 2:
-                self.width = args[1]
-                if length >= 3:
-                    self.height = args[2]
-                    if length >= 4:
-                        self.x = args[3]
-                        if length >= 5:
-                            self.y = args[4]
+        attrs = ["id", "width", "height", "x", "y"]
+        for i, attr in enumerate(attrs):
+            if i < len(args):
+                setattr(self, attr, args[i])
+        if (kwargs is not None) and (args is None or len(args) == 0):
+            for key in ["width", "height", "id", "x", "y"]:
+                if key in kwargs:
+                    setattr(self, key, kwargs[key])
 
     def display(self):
         """
