@@ -34,9 +34,10 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if self.is_validated(value) == 0:
+        valid = self.is_validated(value)
+        if valid == 0:
             self.__width = value
-        elif self.is_validated(value) == 1:
+        elif valid == 1:
             raise TypeError("width must be an integer")
         else:
             raise ValueError("width must be > 0")
@@ -47,9 +48,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        if self.is_validated(value) == 0:
+        valid = self.is_validated(value)
+        if valid == 0:
             self.__height = value
-        elif self.is_validated(value) == 1:
+        elif valid == 1:
             raise TypeError("height must be an integer")
         else:
             raise ValueError("height must be > 0")
@@ -60,9 +62,10 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if self.is_validated(value) == 0 or self.value == 0:
+        valid = self.is_validated(value)
+        if valid == 0 or value == 0:
             self.__x = value
-        elif self.is_validated(value) == 1:
+        elif valid == 1:
             raise TypeError("x must be an integer")
         else:
             raise ValueError("x must be => 0")
@@ -73,9 +76,10 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        if self.is_validated(value) == 0 or self.value == 0:
+        valid = self.is_validated(value)
+        if valid == 0 or value == 0:
             self.__y = value
-        elif self.is_validated(value) == 1:
+        elif valid == 1:
             raise TypeError("y must be an integer")
         else:
             raise ValueError("y must be => 0")
