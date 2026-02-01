@@ -47,6 +47,12 @@ class Rectangle(Base):
                 validation = 0
         return (validation)
 
+    def __str__(self):
+        """
+        str
+        """
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height))
+
     @property
     def width(self):
         return self.__width
