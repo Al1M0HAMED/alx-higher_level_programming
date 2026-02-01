@@ -16,6 +16,19 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def display(self):
+        """
+        desplays the rectangle
+        """
+        i = 0
+        while i < self.__height:
+            j = 0
+            while j < self.__width:
+                print("#", end="")
+                j += 1
+            print("")
+            i += 1
+
     def area(self):
         """
         returns area
