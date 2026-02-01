@@ -20,8 +20,16 @@ class Rectangle(Base):
         """
         desplays the rectangle
         """
+        k = 0
+        while k < self.__y:
+            print("")
+            k += 1
         i = 0
         while i < self.__height:
+            j = 0
+            while j < self.__x:
+                print(" ", end="")
+                j += 1
             j = 0
             while j < self.__width:
                 print("#", end="")
