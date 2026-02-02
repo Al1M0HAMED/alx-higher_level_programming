@@ -4,6 +4,7 @@ Base class
 """
 import json
 
+
 class Base:
     """
     base class
@@ -19,6 +20,7 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         dict to json
