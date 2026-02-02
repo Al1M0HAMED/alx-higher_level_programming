@@ -56,6 +56,18 @@ class Rectangle(Base):
         """
         return (self.__width * self.__height)
 
+    def to_dictionary(self):
+        """
+        returns the dictionary representation of a Rectangle
+        """
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+
     def is_validated(self, value):
         """
         is valid
