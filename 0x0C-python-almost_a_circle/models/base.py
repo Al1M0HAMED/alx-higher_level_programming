@@ -2,7 +2,7 @@
 """
 Base class
 """
-
+import json
 
 class Base:
     """
@@ -18,3 +18,12 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+        """
+        dict to json
+        """
+        if list_dictionaries is not None and len(list_dictionaries) >= 1:
+            return (json.dumps(list_dictionaries))
+        else:
+            return ("[]")
