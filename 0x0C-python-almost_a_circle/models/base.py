@@ -63,3 +63,20 @@ class Base:
         else:
             dict_list = json.loads(json_string)
             return (dict_list)
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        loads form a json file
+        """
+        filename = f"{cls.__name__}.json"
+        try:
+            with open(filename, "r", encoding="utf-8") as f:
+                js_data = f.read()
+            obj_list = cls.from_json_string(js_data)
+        except FileNotFoundError:
+            return ([])
+        created_objects = []
+        for obj in obj_list:
+            created_objects.append(cls.create(**obj))
+        return (created_objects)
