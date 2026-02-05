@@ -20,6 +20,16 @@ class Base:
         else:
             self.id = id
 
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        creats an instance
+        """
+        if dictionary and len(dictionary) > 0:
+            obj = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
+            obj.update(**dictionary)
+            return (obj)
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
