@@ -1,2 +1,2 @@
---shows data bases
+-- shows data bases
 SHOW DATABASES;
