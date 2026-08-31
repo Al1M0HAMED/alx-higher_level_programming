@@ -3,7 +3,7 @@
 let x = parseInt(process.argv[2], 10);
 
 if (!(Number.isNaN(x))) {
-  while (x) {
+  while (x > 0) {
     console.log('C is fun');
     x--;
   }
