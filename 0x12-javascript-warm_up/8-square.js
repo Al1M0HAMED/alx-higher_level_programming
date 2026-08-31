@@ -7,7 +7,7 @@ if (!(Number.isNaN(x))) {
   while (i > 0) {
     let j = x;
     while (j) {
-      process.stdout.write('*');
+      process.stdout.write('X');
       j--;
     }
     console.log('');
