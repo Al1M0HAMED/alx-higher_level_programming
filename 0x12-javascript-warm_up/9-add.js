@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function add(a, b) {
+function add (a, b) {
   const first = parseInt(a, 10);
   const seccond = parseInt(b, 10);
 
