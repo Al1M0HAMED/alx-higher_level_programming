@@ -4,12 +4,12 @@ const SquareA = require('./5-square');
 
 class Square extends SquareA {
   charPrint (c) {
-    if (!(c === undefined) && c === 'C') {
+    if (!(c === undefined)) {
       let height = this.height;
       while (height) {
         let width = this.width;
         while (width) {
-          process.stdout.write('C');
+          process.stdout.write(c);
           width--;
         }
         console.log('');
